@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		61EE63DE2921957400EAD178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63DD2921957400EAD178 /* AppDelegate.swift */; };
 		61EE63E02921957400EAD178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63DF2921957400EAD178 /* SceneDelegate.swift */; };
-		61EE63E22921957400EAD178 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63E12921957400EAD178 /* TabBarController.swift */; };
+		61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63E12921957400EAD178 /* MainTabBarController.swift */; };
 		61EE63E72921957500EAD178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61EE63E62921957500EAD178 /* Assets.xcassets */; };
 		61EE63EA2921957500EAD178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EE63E82921957500EAD178 /* LaunchScreen.storyboard */; };
+		61EE63F529219CE200EAD178 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F429219CE200EAD178 /* FilesViewController.swift */; };
+		61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */; };
+		61EE63FB29219D9500EAD178 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FA29219D9500EAD178 /* FileManagerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61EE63DA2921957400EAD178 /* iosdt-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosdt-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61EE63DD2921957400EAD178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61EE63DF2921957400EAD178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		61EE63E12921957400EAD178 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		61EE63E12921957400EAD178 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		61EE63E62921957500EAD178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61EE63E92921957500EAD178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61EE63EB2921957500EAD178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61EE63F429219CE200EAD178 /* FilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
+		61EE63FA29219D9500EAD178 /* FileManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		61EE63DC2921957400EAD178 /* iosdt-5 */ = {
 			isa = PBXGroup;
 			children = (
-				61EE63DD2921957400EAD178 /* AppDelegate.swift */,
-				61EE63DF2921957400EAD178 /* SceneDelegate.swift */,
-				61EE63E12921957400EAD178 /* TabBarController.swift */,
+				61EE63F929219D7300EAD178 /* Utils */,
+				61EE63F629219D1D00EAD178 /* Protocols */,
+				61EE63F329219CAC00EAD178 /* FilesViewController */,
+				61EE63F129219BD600EAD178 /* SystemDelegate */,
+				61EE63F229219BF600EAD178 /* MainTabBarController */,
 				61EE63E62921957500EAD178 /* Assets.xcassets */,
 				61EE63E82921957500EAD178 /* LaunchScreen.storyboard */,
 				61EE63EB2921957500EAD178 /* Info.plist */,
 			);
 			path = "iosdt-5";
+			sourceTree = "<group>";
+		};
+		61EE63F129219BD600EAD178 /* SystemDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63DD2921957400EAD178 /* AppDelegate.swift */,
+				61EE63DF2921957400EAD178 /* SceneDelegate.swift */,
+			);
+			path = SystemDelegate;
+			sourceTree = "<group>";
+		};
+		61EE63F229219BF600EAD178 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63E12921957400EAD178 /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		61EE63F329219CAC00EAD178 /* FilesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63F429219CE200EAD178 /* FilesViewController.swift */,
+			);
+			path = FilesViewController;
+			sourceTree = "<group>";
+		};
+		61EE63F629219D1D00EAD178 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		61EE63F929219D7300EAD178 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63FA29219D9500EAD178 /* FileManagerService.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61EE63E22921957400EAD178 /* TabBarController.swift in Sources */,
+				61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */,
 				61EE63DE2921957400EAD178 /* AppDelegate.swift in Sources */,
+				61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */,
+				61EE63F529219CE200EAD178 /* FilesViewController.swift in Sources */,
 				61EE63E02921957400EAD178 /* SceneDelegate.swift in Sources */,
+				61EE63FB29219D9500EAD178 /* FileManagerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  TabBarController.swift
+//  MainTabBarController.swift
 //  iosdt-5
 //
 //  Created by Александр Востриков on 14.11.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
