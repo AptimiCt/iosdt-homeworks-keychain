@@ -15,6 +15,7 @@
 		61EE63F529219CE200EAD178 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F429219CE200EAD178 /* FilesViewController.swift */; };
 		61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */; };
 		61EE63FB29219D9500EAD178 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FA29219D9500EAD178 /* FileManagerService.swift */; };
+		61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FD29219FD600EAD178 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		61EE63F429219CE200EAD178 /* FilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
 		61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
 		61EE63FA29219D9500EAD178 /* FileManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		61EE63FD29219FD600EAD178 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		61EE63DC2921957400EAD178 /* iosdt-5 */ = {
 			isa = PBXGroup;
 			children = (
+				61EE63FC29219F8C00EAD178 /* SettingsViewController */,
 				61EE63F929219D7300EAD178 /* Utils */,
 				61EE63F629219D1D00EAD178 /* Protocols */,
 				61EE63F329219CAC00EAD178 /* FilesViewController */,
@@ -111,6 +114,14 @@
 				61EE63FA29219D9500EAD178 /* FileManagerService.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		61EE63FC29219F8C00EAD178 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63FD29219FD600EAD178 /* SettingsViewController.swift */,
+			);
+			path = SettingsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 			files = (
 				61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */,
 				61EE63DE2921957400EAD178 /* AppDelegate.swift in Sources */,
+				61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */,
 				61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */,
 				61EE63F529219CE200EAD178 /* FilesViewController.swift in Sources */,
 				61EE63E02921957400EAD178 /* SceneDelegate.swift in Sources */,
