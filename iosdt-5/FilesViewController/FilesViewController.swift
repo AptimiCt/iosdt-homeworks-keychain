@@ -31,6 +31,7 @@ final class FilesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         setupTableView()
         addButtonImagePicker()
         do {

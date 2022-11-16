@@ -11,7 +11,37 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+        generateTabBar()
+        setTabBarAppearance()
+    }
+    
+    private func generateTabBar(){
+        
+        let navController = UINavigationController(rootViewController: FilesViewController())
+        
+        viewControllers = [
+            generateVC(
+                viewController: navController,
+                title: "Files",
+                image: UIImage(systemName: "folder.fill")
+            ),
+            generateVC(
+                viewController: SettingsViewController(),
+                title: "Settings",
+                image: UIImage(systemName: "slider.horizontal.3")
+            )
+        ]
+    }
+    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
+        viewController.tabBarItem.title = title
+        viewController.tabBarItem.image = image
+        
+        return viewController
+    }
+    
+    private func setTabBarAppearance() {
+        tabBar.tintColor = .tabBarItemAccent
+        tabBar.unselectedItemTintColor = .tabBarItemLight
     }
 }
 

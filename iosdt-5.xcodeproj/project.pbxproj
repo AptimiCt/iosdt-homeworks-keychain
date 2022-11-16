@@ -16,6 +16,7 @@
 		61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */; };
 		61EE63FB29219D9500EAD178 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FA29219D9500EAD178 /* FileManagerService.swift */; };
 		61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FD29219FD600EAD178 /* SettingsViewController.swift */; };
+		BBF31B5F2922BDD800C2B230 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
 		61EE63FA29219D9500EAD178 /* FileManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		61EE63FD29219FD600EAD178 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		61EE63DC2921957400EAD178 /* iosdt-5 */ = {
 			isa = PBXGroup;
 			children = (
+				BBF31B602922DCB300C2B230 /* Extension */,
 				61EE63FC29219F8C00EAD178 /* SettingsViewController */,
 				61EE63F929219D7300EAD178 /* Utils */,
 				61EE63F629219D1D00EAD178 /* Protocols */,
@@ -122,6 +125,14 @@
 				61EE63FD29219FD600EAD178 /* SettingsViewController.swift */,
 			);
 			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		BBF31B602922DCB300C2B230 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */,
 				61EE63DE2921957400EAD178 /* AppDelegate.swift in Sources */,
 				61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */,
+				BBF31B5F2922BDD800C2B230 /* UIColorExtension.swift in Sources */,
 				61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */,
 				61EE63F529219CE200EAD178 /* FilesViewController.swift in Sources */,
 				61EE63E02921957400EAD178 /* SceneDelegate.swift in Sources */,
