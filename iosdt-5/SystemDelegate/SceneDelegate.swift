@@ -16,7 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
  
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = MainTabBarController()
+        let user = User(name: "Алекс", surname: "Vostrikov")
+        let loginVC = LoginViewController(state: .passwordCreated)
+        //window?.rootViewController = MainTabBarController()
+        loginVC.user = user
+        window?.rootViewController = LoginViewController(state: .passwordCreated)
         window?.makeKeyAndVisible()
         
     }
