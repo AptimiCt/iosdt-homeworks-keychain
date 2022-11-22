@@ -17,6 +17,6 @@ enum Resources {
     }
     
     enum error: String {
-        case passwordIsNotCorrect = "Не пароли не совпадают"
+        case passwordsDoNotMatch = "Не пароли не совпадают"
     }
 }

@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol MainCoordinator {
-    func startApp()
+protocol Coordinator {
+    func startApp() -> UIViewController
 }

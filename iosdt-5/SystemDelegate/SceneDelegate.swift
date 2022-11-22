@@ -11,18 +11,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
  
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let user = User(name: "Алекс", surname: "Vostrikov")
-        let loginVC = LoginViewController(state: .passwordCreated)
-        //window?.rootViewController = MainTabBarController()
-        loginVC.user = user
-        window?.rootViewController = LoginViewController(state: .passwordCreated)
+        let coordinator = AppCoordinator()
+        window?.rootViewController = coordinator.startApp()
         window?.makeKeyAndVisible()
-        
     }
 }
 

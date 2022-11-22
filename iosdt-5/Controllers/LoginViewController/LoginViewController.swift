@@ -9,11 +9,11 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    var user: User?
+    var credentials: Credentials?
+    var coordinator: FlowCoordinator?
     
     private var state: Resources.state
     private var screen: Resources.screen?
-    private var password: String?
     
     private var passwordTextField: UITextField = {
         let textField = UITextField()
@@ -52,13 +52,14 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         configureLayout()
         configureButtonForState()
+    }
+    //MARK: - private func
+    private func configureLayout() {
         self.screen = .first
         view.backgroundColor = .white
         passwordTextField.delegate = self
         checkButton.isEnabled = false
-    }
-    
-    private func configureLayout() {
+        
         view.addSubview(passwordTextField)
         view.addSubview(checkButton)
         
@@ -94,26 +95,50 @@ final class LoginViewController: UIViewController {
                 checkButton.setTitle("Повторите пароль", for: .normal)
         }
     }
+    private func configureViewToFirst() {
+        passwordTextField.text = nil
+        checkButton.isEnabled = false
+        credentials?.password = ""
+        configureButtonFor(screen: .first)
+        alertForError(message: Resources.error.passwordsDoNotMatch.rawValue)
+    }
+    
     private func checkButtonAction() {
         guard let pass = passwordTextField.text else { return }
         guard let screen = screen else { return }
+        
         switch screen {
             case .first:
-                self.screen = .second
-                configureButtonFor(screen: .second)
-                passwordTextField.text = ""
+                
+                passwordTextField.text = nil
                 checkButton.isEnabled = false
-                password = pass
-            case .second:
-                if password == pass {
-                    savePassword(pass)
-                    #warning("Дописать метод перехода к MainTabBarController")
+                credentials?.password = pass
+                
+                if let credentials = credentials, state == .passwordCreated {
+                    guard let password = retrievePassword(with: credentials) else { return }
+                    if password == pass {
+                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = MainTabBarController()
+                    } else {
+                        configureViewToFirst()
+                        //configureButtonFor(screen: .first)
+                    }
                 } else {
-                    configureButtonFor(screen: .first)
-                    passwordTextField.text = ""
-                    checkButton.isEnabled = false
-                    password = nil
-                    alertForError(message: Resources.error.passwordIsNotCorrect.rawValue)
+                    self.screen = .second
+                    configureButtonFor(screen: .second)
+                }
+            case .second:
+                if let credentials = credentials, credentials.password == pass, state == .passwordIsNotSet {
+                    save(credentials: credentials)
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = MainTabBarController()
+                    #warning("Убрать код ниже")
+                    self.screen = .first
+                    configureViewToFirst()
+                    //configureButtonFor(screen: .first)
+                    
+                } else {
+                    self.screen = .first
+                    configureViewToFirst()
+                    //configureButtonFor(screen: .first)
                 }
         }
     }
@@ -129,11 +154,55 @@ final class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func savePassword(_ passwd: String) {
-        print(passwd)
+    private func save(credentials: Credentials) {
+        guard let passData = credentials.password.data(using: .utf8) else {
+            print("Невозможно получить Data из пароля")
+            return }
+        
+        let query = [
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrService: credentials.serviceName,
+            kSecAttrAccount: credentials.username,
+            kSecValueData: passData
+        ] as CFDictionary
+        
+        let status = SecItemAdd(query, nil)
+        guard status == errSecDuplicateItem || status == errSecSuccess else {
+            print("Невозможно добавить пароль, ошибка номер: \(status)")
+            return
+        }
     }
+    
+    private func retrievePassword(with credentials: Credentials) -> String? {
+        let query = [
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrService: credentials.serviceName,
+            kSecAttrAccount: credentials.username,
+            kSecReturnData: true
+        ] as CFDictionary
+        
+        var extractedData: AnyObject?
+        
+        let status = SecItemCopyMatching(query, &extractedData)
+        
+        guard status == errSecItemNotFound || status == errSecSuccess else {
+            print("Невозможно получить пароль, ошибка номер: \(status)")
+            return nil
+        }
+        guard status != errSecItemNotFound else {
+            print("Пароль не найден в Keychain")
+            return nil
+        }
+        guard let passData = extractedData as? Data,
+              let password = String(data: passData, encoding: .utf8) else {
+            print("невозможно преобразовать data в пароль")
+            return nil
+        }
+        return password
+    }
+    
 }
-
+//MARK: - extension LoginViewController: UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let currentText = textField.text else { return false}

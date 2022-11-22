@@ -16,10 +16,11 @@
 		61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */; };
 		61EE63FB29219D9500EAD178 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FA29219D9500EAD178 /* FileManagerService.swift */; };
 		61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FD29219FD600EAD178 /* SettingsViewController.swift */; };
-		BBAB647E29282B0C001645F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAB647D29282B0C001645F1 /* User.swift */; };
+		BBAB647E29282B0C001645F1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAB647D29282B0C001645F1 /* Credentials.swift */; };
+		BBAB6480292AA4F7001645F1 /* LoginViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAB647F292AA4F7001645F1 /* LoginViewControllerCoordinator.swift */; };
 		BBF31B5F2922BDD800C2B230 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */; };
 		BBF31B662924E14900C2B230 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B652924E14900C2B230 /* AppCoordinator.swift */; };
-		BBF31B682924E21600C2B230 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B672924E21600C2B230 /* MainCoordinator.swift */; };
+		BBF31B682924E21600C2B230 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B672924E21600C2B230 /* Coordinator.swift */; };
 		BBF31B6A2924E25600C2B230 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B692924E25600C2B230 /* FlowCoordinator.swift */; };
 		BBF31B6F29257B3000C2B230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B6E29257B3000C2B230 /* LoginViewController.swift */; };
 		BBF31B7129258E7300C2B230 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B7029258E7300C2B230 /* Resources.swift */; };
@@ -37,10 +38,11 @@
 		61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
 		61EE63FA29219D9500EAD178 /* FileManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		61EE63FD29219FD600EAD178 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		BBAB647D29282B0C001645F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BBAB647D29282B0C001645F1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		BBAB647F292AA4F7001645F1 /* LoginViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		BBF31B652924E14900C2B230 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		BBF31B672924E21600C2B230 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BBF31B672924E21600C2B230 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BBF31B692924E25600C2B230 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		BBF31B6E29257B3000C2B230 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBF31B7029258E7300C2B230 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				BBAB647C29282AFE001645F1 /* Model */,
-				BBF31B642924E12E00C2B230 /* AppCoordinator */,
+				BBF31B642924E12E00C2B230 /* Coordinators */,
 				BBF31B602922DCB300C2B230 /* Extension */,
 				61EE63F929219D7300EAD178 /* Utils */,
 				61EE63F629219D1D00EAD178 /* Protocols */,
@@ -118,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */,
-				BBF31B672924E21600C2B230 /* MainCoordinator.swift */,
+				BBF31B672924E21600C2B230 /* Coordinator.swift */,
 				BBF31B692924E25600C2B230 /* FlowCoordinator.swift */,
 			);
 			path = Protocols;
@@ -144,7 +146,7 @@
 		BBAB647C29282AFE001645F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BBAB647D29282B0C001645F1 /* User.swift */,
+				BBAB647D29282B0C001645F1 /* Credentials.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,12 +159,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		BBF31B642924E12E00C2B230 /* AppCoordinator */ = {
+		BBF31B642924E12E00C2B230 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				BBF31B652924E14900C2B230 /* AppCoordinator.swift */,
+				BBAB647F292AA4F7001645F1 /* LoginViewControllerCoordinator.swift */,
 			);
-			path = AppCoordinator;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		BBF31B6B292579B500C2B230 /* SupportingFiles */ = {
@@ -267,10 +270,11 @@
 				BBF31B6F29257B3000C2B230 /* LoginViewController.swift in Sources */,
 				61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */,
 				BBF31B6A2924E25600C2B230 /* FlowCoordinator.swift in Sources */,
+				BBAB6480292AA4F7001645F1 /* LoginViewControllerCoordinator.swift in Sources */,
 				61EE63DE2921957400EAD178 /* AppDelegate.swift in Sources */,
 				61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */,
-				BBAB647E29282B0C001645F1 /* User.swift in Sources */,
-				BBF31B682924E21600C2B230 /* MainCoordinator.swift in Sources */,
+				BBAB647E29282B0C001645F1 /* Credentials.swift in Sources */,
+				BBF31B682924E21600C2B230 /* Coordinator.swift in Sources */,
 				BBF31B5F2922BDD800C2B230 /* UIColorExtension.swift in Sources */,
 				61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */,
 				61EE63F529219CE200EAD178 /* FilesViewController.swift in Sources */,
