@@ -9,19 +9,47 @@
 /* Begin PBXBuildFile section */
 		61EE63DE2921957400EAD178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63DD2921957400EAD178 /* AppDelegate.swift */; };
 		61EE63E02921957400EAD178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63DF2921957400EAD178 /* SceneDelegate.swift */; };
-		61EE63E22921957400EAD178 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63E12921957400EAD178 /* TabBarController.swift */; };
+		61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63E12921957400EAD178 /* MainTabBarController.swift */; };
 		61EE63E72921957500EAD178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61EE63E62921957500EAD178 /* Assets.xcassets */; };
 		61EE63EA2921957500EAD178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EE63E82921957500EAD178 /* LaunchScreen.storyboard */; };
+		61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */; };
+		61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FD29219FD600EAD178 /* SettingsViewController.swift */; };
+		BB0840262945DE5E00E0F846 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0840252945DE5E00E0F846 /* LoginViewController.swift */; };
+		BB08402829466AB500E0F846 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08402729466AB500E0F846 /* FileManagerService.swift */; };
+		BB08402A29468E1E00E0F846 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08402929468E1E00E0F846 /* FilesViewController.swift */; };
+		BB0F2FAA29413FEB00D0BF22 /* OutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F2FA929413FEB00D0BF22 /* OutputProtocol.swift */; };
+		BB30CB932942392B00C1490D /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30CB922942392B00C1490D /* TabBarCoordinator.swift */; };
+		BB753456293D35280030F1F0 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB753455293D35280030F1F0 /* KeychainService.swift */; };
+		BBAB647E29282B0C001645F1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAB647D29282B0C001645F1 /* Credentials.swift */; };
+		BBAB6480292AA4F7001645F1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAB647F292AA4F7001645F1 /* AppCoordinator.swift */; };
+		BBF31B5F2922BDD800C2B230 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */; };
+		BBF31B662924E14900C2B230 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B652924E14900C2B230 /* LoginCoordinator.swift */; };
+		BBF31B682924E21600C2B230 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B672924E21600C2B230 /* Coordinator.swift */; };
+		BBF31B7129258E7300C2B230 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B7029258E7300C2B230 /* Resources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61EE63DA2921957400EAD178 /* iosdt-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosdt-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61EE63DD2921957400EAD178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61EE63DF2921957400EAD178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		61EE63E12921957400EAD178 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		61EE63E12921957400EAD178 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		61EE63E62921957500EAD178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61EE63E92921957500EAD178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61EE63EB2921957500EAD178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
+		61EE63FD29219FD600EAD178 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BB0840252945DE5E00E0F846 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BB08402729466AB500E0F846 /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		BB08402929468E1E00E0F846 /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		BB0F2FA929413FEB00D0BF22 /* OutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputProtocol.swift; sourceTree = "<group>"; };
+		BB30CB922942392B00C1490D /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		BB753455293D35280030F1F0 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		BBAB647D29282B0C001645F1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		BBAB647F292AA4F7001645F1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		BBF31B652924E14900C2B230 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		BBF31B672924E21600C2B230 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BBF31B7029258E7300C2B230 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +82,124 @@
 		61EE63DC2921957400EAD178 /* iosdt-5 */ = {
 			isa = PBXGroup;
 			children = (
+				BBAB647C29282AFE001645F1 /* Model */,
+				BBF31B642924E12E00C2B230 /* Coordinators */,
+				BBF31B602922DCB300C2B230 /* Extension */,
+				61EE63F929219D7300EAD178 /* Utils */,
+				61EE63F629219D1D00EAD178 /* Protocols */,
+				BBF31B6C29257AE400C2B230 /* Controllers */,
+				61EE63F129219BD600EAD178 /* SystemDelegate */,
+				61EE63F229219BF600EAD178 /* MainTabBarController */,
+				BBF31B6B292579B500C2B230 /* SupportingFiles */,
+			);
+			path = "iosdt-5";
+			sourceTree = "<group>";
+		};
+		61EE63F129219BD600EAD178 /* SystemDelegate */ = {
+			isa = PBXGroup;
+			children = (
 				61EE63DD2921957400EAD178 /* AppDelegate.swift */,
 				61EE63DF2921957400EAD178 /* SceneDelegate.swift */,
-				61EE63E12921957400EAD178 /* TabBarController.swift */,
+			);
+			path = SystemDelegate;
+			sourceTree = "<group>";
+		};
+		61EE63F229219BF600EAD178 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63E12921957400EAD178 /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		61EE63F329219CAC00EAD178 /* FilesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB08402929468E1E00E0F846 /* FilesViewController.swift */,
+			);
+			path = FilesViewController;
+			sourceTree = "<group>";
+		};
+		61EE63F629219D1D00EAD178 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */,
+				BBF31B672924E21600C2B230 /* Coordinator.swift */,
+				BB0F2FA929413FEB00D0BF22 /* OutputProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		61EE63F929219D7300EAD178 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BB08402729466AB500E0F846 /* FileManagerService.swift */,
+				BBF31B7029258E7300C2B230 /* Resources.swift */,
+				BB753455293D35280030F1F0 /* KeychainService.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		61EE63FC29219F8C00EAD178 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63FD29219FD600EAD178 /* SettingsViewController.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		BBAB647C29282AFE001645F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBAB647D29282B0C001645F1 /* Credentials.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBF31B602922DCB300C2B230 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BBF31B642924E12E00C2B230 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				BBF31B652924E14900C2B230 /* LoginCoordinator.swift */,
+				BBAB647F292AA4F7001645F1 /* AppCoordinator.swift */,
+				BB30CB922942392B00C1490D /* TabBarCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		BBF31B6B292579B500C2B230 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				61EE63E62921957500EAD178 /* Assets.xcassets */,
 				61EE63E82921957500EAD178 /* LaunchScreen.storyboard */,
 				61EE63EB2921957500EAD178 /* Info.plist */,
 			);
-			path = "iosdt-5";
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BBF31B6C29257AE400C2B230 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61EE63FC29219F8C00EAD178 /* SettingsViewController */,
+				BBF31B6D29257B1100C2B230 /* LoginViewController */,
+				61EE63F329219CAC00EAD178 /* FilesViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BBF31B6D29257B1100C2B230 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB0840252945DE5E00E0F846 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +272,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61EE63E22921957400EAD178 /* TabBarController.swift in Sources */,
+				BBF31B7129258E7300C2B230 /* Resources.swift in Sources */,
+				61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */,
+				BBAB6480292AA4F7001645F1 /* AppCoordinator.swift in Sources */,
+				BB08402829466AB500E0F846 /* FileManagerService.swift in Sources */,
 				61EE63DE2921957400EAD178 /* AppDelegate.swift in Sources */,
+				61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */,
+				BB08402A29468E1E00E0F846 /* FilesViewController.swift in Sources */,
+				BBAB647E29282B0C001645F1 /* Credentials.swift in Sources */,
+				BBF31B682924E21600C2B230 /* Coordinator.swift in Sources */,
+				BBF31B5F2922BDD800C2B230 /* UIColorExtension.swift in Sources */,
+				61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */,
+				BB0F2FAA29413FEB00D0BF22 /* OutputProtocol.swift in Sources */,
+				BBF31B662924E14900C2B230 /* LoginCoordinator.swift in Sources */,
+				BB30CB932942392B00C1490D /* TabBarCoordinator.swift in Sources */,
+				BB753456293D35280030F1F0 /* KeychainService.swift in Sources */,
+				BB0840262945DE5E00E0F846 /* LoginViewController.swift in Sources */,
 				61EE63E02921957400EAD178 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +430,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5BPW3NPX5G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iosdt-5/Info.plist";
+				INFOPLIST_FILE = "iosdt-5/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -310,7 +462,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5BPW3NPX5G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iosdt-5/Info.plist";
+				INFOPLIST_FILE = "iosdt-5/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
