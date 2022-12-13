@@ -1,23 +1,31 @@
 //
 //  FilesViewController.swift
-//  Navigation
+//  iosdt-5
 //
-//  Created by Александр Востриков on 08.11.2022.
+//  Created by Александр Востриков on 12.12.2022.
 //
 
 import UIKit
 
 final class FilesViewController: UIViewController {
     
-    private var contentsDict: [URL: String] = [:] {
+    private var alfaIsOn: Bool! {
         didSet{
-            files = dictToArray()
+            files = sortFiles()
             tableView.reloadData()
         }
     }
+    
     private var files: [URL] = []
+    {
+        didSet{
+            tableView.reloadData()
+        }
+    }
     
     let fileManagerService = FileManagerService()
+    
+    private var isDir: Bool? = false
     
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -35,10 +43,14 @@ final class FilesViewController: UIViewController {
         setupTableView()
         addButtonImagePicker()
         do {
-            contentsDict = try fileManagerService.contentsOfDirectory()
+            files = try fileManagerService.contentsOfDirectory()
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        alfaIsOn = UserDefaults.standard.bool(forKey: Resources.key.sort.rawValue)
     }
     
     private func setupTableView(){
@@ -69,8 +81,12 @@ final class FilesViewController: UIViewController {
         tableView.reloadData()
     }
     
-    private func dictToArray() -> [URL] {
-        Array(self.contentsDict.keys).sorted { $0.lastPathComponent < $1.lastPathComponent }
+    private func sortFiles() -> [URL] {
+        if alfaIsOn {
+           return  files.sorted { $0.lastPathComponent < $1.lastPathComponent }
+        } else {
+            return files.sorted { $0.lastPathComponent > $1.lastPathComponent }
+        }
     }
 }
 
@@ -85,11 +101,24 @@ extension FilesViewController: UITableViewDataSource {
         
         let file = files[indexPath.row]
         content.text = file.lastPathComponent
-        guard let val = contentsDict[file] else {
+        
+        do {
+            isDir = try file.isDirectory()
+        } catch {
+            print(error.localizedDescription)
+        }
+        guard let isDir = isDir else {
             cell.contentConfiguration = content
-            return cell }
-
-        cell.accessoryType = val == "NSFileTypeDirectory" ? .disclosureIndicator : .none
+            return  cell
+        }
+        
+        if !isDir, let imageData = try? Data(contentsOf: file) {
+                content.image = UIImage(data: imageData)
+        }else {
+            content.image = UIImage(systemName: "folder.fill")
+        }
+        content.imageProperties.maximumSize  = CGSize(width: 25, height: 25)
+        cell.accessoryType = isDir ? .disclosureIndicator : .none
         cell.contentConfiguration = content
         return cell
     }
@@ -105,10 +134,9 @@ extension FilesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let urlFile = files.remove(at: indexPath.row)
+            tableView.reloadRows(at: [indexPath], with: .fade)
             do {
                 try fileManagerService.removeContent(at: urlFile)
-                // Стоит ли тут перечитывать директорию, или может стоило просто удалить значение по ключу из contentsDict и tableView.reloadData()
-                try contentsDict = fileManagerService.contentsOfDirectory()
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -123,10 +151,11 @@ extension FilesViewController: UIImagePickerControllerDelegate, UINavigationCont
         do {
             let data = try Data(contentsOf: url)
             try fileManagerService.createFile(name: url.lastPathComponent, data: data)
-            try contentsDict = fileManagerService.contentsOfDirectory()
+            try files = fileManagerService.contentsOfDirectory()
         } catch let error {
             print(error.localizedDescription)
         }
+        files = sortFiles()
         picker.dismiss(animated: true)
     }
     

@@ -14,9 +14,22 @@ enum Resources {
     enum screen {
         case first
         case second
+        case changePassword
     }
     
-    enum error: String {
-        case passwordsDoNotMatch = "Не пароли не совпадают"
+    enum Status {
+        case Authorized
+        case NotAuthorized
+    }
+    
+    enum message: String {
+        case passwordsDoNotMatch = "Пароли не совпадают"
+        case passwordDidNotChange = "Пароль не удалось обновить"
+        case passwordChanged = "Пароль обновлен"
+        case passwordNotCorrect = "Не корректный пароль или пароли совпадают"
+        
+    }
+    enum key: String {
+        case sort
     }
 }

@@ -2,47 +2,75 @@
 //  AppCoordinator.swift
 //  iosdt-5
 //
-//  Created by Александр Востриков on 16.11.2022.
+//  Created by Александр Востриков on 20.11.2022.
 //
 
 import UIKit
 
 final class AppCoordinator: Coordinator {
-    enum State {
-        case Authorized
-        case NotAuthorized
+    
+    private(set) var childCoordinators: [Coordinator] = []
+    
+    private let window: UIWindow
+    private var status: Resources.Status = .NotAuthorized
+    
+    init(window: UIWindow) {
+        self.window = window
+    }
+    deinit{
+        print("AppCoordinator удален")
     }
     
-    func startApp() -> UIViewController {
-        
-        let credentials = Credentials(password: "")
-        
-        let state = checkUserInKeyChain(credentials: credentials)
-        
-        switch state {
-            case .Authorized:
-                let loginViewController = LoginViewController(state: .passwordCreated)
-                loginViewController.credentials = credentials
-                return loginViewController
+    //Насколько корректно реализован Главный координатор?
+    func startApp() {
+        switch status {
             case .NotAuthorized:
-                let loginViewController = LoginViewController(state: .passwordIsNotSet)
-                loginViewController.credentials = credentials
-                return loginViewController
+                runAuth()
+            case .Authorized:
+                runMain()
+        }
+        window.makeKeyAndVisible()
+    }
+    
+    private func runAuth() {
+        let loginCoordinator = LoginCoordinator()
+        loginCoordinator.output = self
+        loginCoordinator.startApp()
+        window.rootViewController = loginCoordinator.rootViewController
+        childCoordinators.append(loginCoordinator)
+    }
+    
+    private func runMain() {
+        let tabBarCoordinator = TabBarCoordinator()
+        tabBarCoordinator.output = self
+        tabBarCoordinator.startApp()
+        window.rootViewController = tabBarCoordinator.rootViewController
+        childCoordinators.append(tabBarCoordinator)
+    }
+    
+    private func add(coordinator: Coordinator){
+        for childCoordinator in childCoordinators {
+            if childCoordinator === coordinator { return }
+        }
+        childCoordinators.append(coordinator)
+    }
+    
+    private func remove(coordinator: Coordinator) {
+        guard childCoordinators.isEmpty == false else { return }
+        for (index, item) in childCoordinators.enumerated() {
+            if item === coordinator {
+                childCoordinators.remove(at: index)
+                break
+            }
         }
     }
     
-    private func checkUserInKeyChain(credentials: Credentials) -> State {
-        
-        let keychainItemQuery = [
-            kSecClass: kSecClassGenericPassword,
-            kSecAttrService: credentials.serviceName,
-        ] as CFDictionary
-        
-        let status = SecItemCopyMatching(keychainItemQuery, nil)
-        
-        guard status != errSecItemNotFound else {
-            return .NotAuthorized
-        }
-        return .Authorized
+}
+
+extension AppCoordinator: OutputProtocol {
+    func exit(with status: Resources.Status, and coordinator: Coordinator) {
+        remove(coordinator: coordinator)
+        self.status = status
+        self.startApp()
     }
 }

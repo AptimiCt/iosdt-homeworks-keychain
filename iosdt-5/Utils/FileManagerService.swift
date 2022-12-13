@@ -1,17 +1,21 @@
 //
 //  FileManagerService.swift
-//  Navigation
+//  iosdt-5
 //
-//  Created by Александр Востриков on 09.11.2022.
+//  Created by Александр Востриков on 11.12.2022.
 //
 
 import Foundation
 
-final class FileManagerService: FileManagerServiceProtocol {
+final class FileManagerService {
     
     private let managerService = FileManager.default
-
-    func contentsOfDirectory() throws -> [URL: String] {
+    
+    private var path: URL {
+        managerService.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+    
+    func contentsOfDirectory() throws -> [URL] {
         let documentsUrl = try managerService.url(for: .documentDirectory,
                                                 in: .userDomainMask,
                                                 appropriateFor: nil,
@@ -19,10 +23,9 @@ final class FileManagerService: FileManagerServiceProtocol {
         let contentsOfDirectory = try managerService.contentsOfDirectory(at: documentsUrl,
                                                               includingPropertiesForKeys: nil,
                                                               options: [.skipsHiddenFiles])
-        let contents = try urlToDict(urls: contentsOfDirectory)
 //        Распечатать путь до каталога documents симулятора
 //        print(documentsUrl)
-        return contents
+        return contentsOfDirectory
     }
     
     func createFile(name: String, data: Data) throws {
@@ -37,14 +40,10 @@ final class FileManagerService: FileManagerServiceProtocol {
     func removeContent(at url: URL) throws{
         try managerService.removeItem(at: url)
     }
-    
-    private func urlToDict(urls: [URL]) throws -> [URL: String] {
-        var contents: [URL: String] = [:]
-        for url in urls {
-            let attributes = try managerService.attributesOfItem(atPath: url.path)
-            let typeAttributes = attributes[.type] as? String
-            contents[url] = typeAttributes
-        }
-        return contents
+}
+
+extension URL {
+    func isDirectory() throws -> Bool? {
+        try resourceValues(forKeys: [URLResourceKey.isDirectoryKey]).isDirectory
     }
 }

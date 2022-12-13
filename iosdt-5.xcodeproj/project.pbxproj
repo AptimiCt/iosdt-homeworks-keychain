@@ -12,17 +12,19 @@
 		61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63E12921957400EAD178 /* MainTabBarController.swift */; };
 		61EE63E72921957500EAD178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61EE63E62921957500EAD178 /* Assets.xcassets */; };
 		61EE63EA2921957500EAD178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EE63E82921957500EAD178 /* LaunchScreen.storyboard */; };
-		61EE63F529219CE200EAD178 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F429219CE200EAD178 /* FilesViewController.swift */; };
 		61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */; };
-		61EE63FB29219D9500EAD178 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FA29219D9500EAD178 /* FileManagerService.swift */; };
 		61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EE63FD29219FD600EAD178 /* SettingsViewController.swift */; };
+		BB0840262945DE5E00E0F846 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0840252945DE5E00E0F846 /* LoginViewController.swift */; };
+		BB08402829466AB500E0F846 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08402729466AB500E0F846 /* FileManagerService.swift */; };
+		BB08402A29468E1E00E0F846 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08402929468E1E00E0F846 /* FilesViewController.swift */; };
+		BB0F2FAA29413FEB00D0BF22 /* OutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F2FA929413FEB00D0BF22 /* OutputProtocol.swift */; };
+		BB30CB932942392B00C1490D /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30CB922942392B00C1490D /* TabBarCoordinator.swift */; };
+		BB753456293D35280030F1F0 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB753455293D35280030F1F0 /* KeychainService.swift */; };
 		BBAB647E29282B0C001645F1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAB647D29282B0C001645F1 /* Credentials.swift */; };
-		BBAB6480292AA4F7001645F1 /* LoginViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAB647F292AA4F7001645F1 /* LoginViewControllerCoordinator.swift */; };
+		BBAB6480292AA4F7001645F1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAB647F292AA4F7001645F1 /* AppCoordinator.swift */; };
 		BBF31B5F2922BDD800C2B230 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */; };
-		BBF31B662924E14900C2B230 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B652924E14900C2B230 /* AppCoordinator.swift */; };
+		BBF31B662924E14900C2B230 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B652924E14900C2B230 /* LoginCoordinator.swift */; };
 		BBF31B682924E21600C2B230 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B672924E21600C2B230 /* Coordinator.swift */; };
-		BBF31B6A2924E25600C2B230 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B692924E25600C2B230 /* FlowCoordinator.swift */; };
-		BBF31B6F29257B3000C2B230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B6E29257B3000C2B230 /* LoginViewController.swift */; };
 		BBF31B7129258E7300C2B230 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF31B7029258E7300C2B230 /* Resources.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,17 +36,19 @@
 		61EE63E62921957500EAD178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61EE63E92921957500EAD178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61EE63EB2921957500EAD178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61EE63F429219CE200EAD178 /* FilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
 		61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
-		61EE63FA29219D9500EAD178 /* FileManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		61EE63FD29219FD600EAD178 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BB0840252945DE5E00E0F846 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BB08402729466AB500E0F846 /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		BB08402929468E1E00E0F846 /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		BB0F2FA929413FEB00D0BF22 /* OutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputProtocol.swift; sourceTree = "<group>"; };
+		BB30CB922942392B00C1490D /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		BB753455293D35280030F1F0 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		BBAB647D29282B0C001645F1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		BBAB647F292AA4F7001645F1 /* LoginViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		BBAB647F292AA4F7001645F1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBF31B5E2922BDD800C2B230 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		BBF31B652924E14900C2B230 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BBF31B652924E14900C2B230 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		BBF31B672924E21600C2B230 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		BBF31B692924E25600C2B230 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
-		BBF31B6E29257B3000C2B230 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBF31B7029258E7300C2B230 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +115,7 @@
 		61EE63F329219CAC00EAD178 /* FilesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				61EE63F429219CE200EAD178 /* FilesViewController.swift */,
+				BB08402929468E1E00E0F846 /* FilesViewController.swift */,
 			);
 			path = FilesViewController;
 			sourceTree = "<group>";
@@ -121,7 +125,7 @@
 			children = (
 				61EE63F729219D4900EAD178 /* FileManagerServiceProtocol.swift */,
 				BBF31B672924E21600C2B230 /* Coordinator.swift */,
-				BBF31B692924E25600C2B230 /* FlowCoordinator.swift */,
+				BB0F2FA929413FEB00D0BF22 /* OutputProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -129,8 +133,9 @@
 		61EE63F929219D7300EAD178 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				61EE63FA29219D9500EAD178 /* FileManagerService.swift */,
+				BB08402729466AB500E0F846 /* FileManagerService.swift */,
 				BBF31B7029258E7300C2B230 /* Resources.swift */,
+				BB753455293D35280030F1F0 /* KeychainService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,8 +167,9 @@
 		BBF31B642924E12E00C2B230 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				BBF31B652924E14900C2B230 /* AppCoordinator.swift */,
-				BBAB647F292AA4F7001645F1 /* LoginViewControllerCoordinator.swift */,
+				BBF31B652924E14900C2B230 /* LoginCoordinator.swift */,
+				BBAB647F292AA4F7001645F1 /* AppCoordinator.swift */,
+				BB30CB922942392B00C1490D /* TabBarCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -191,7 +197,7 @@
 		BBF31B6D29257B1100C2B230 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BBF31B6E29257B3000C2B230 /* LoginViewController.swift */,
+				BB0840252945DE5E00E0F846 /* LoginViewController.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -267,20 +273,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF31B7129258E7300C2B230 /* Resources.swift in Sources */,
-				BBF31B6F29257B3000C2B230 /* LoginViewController.swift in Sources */,
 				61EE63E22921957400EAD178 /* MainTabBarController.swift in Sources */,
-				BBF31B6A2924E25600C2B230 /* FlowCoordinator.swift in Sources */,
-				BBAB6480292AA4F7001645F1 /* LoginViewControllerCoordinator.swift in Sources */,
+				BBAB6480292AA4F7001645F1 /* AppCoordinator.swift in Sources */,
+				BB08402829466AB500E0F846 /* FileManagerService.swift in Sources */,
 				61EE63DE2921957400EAD178 /* AppDelegate.swift in Sources */,
 				61EE63FE29219FD600EAD178 /* SettingsViewController.swift in Sources */,
+				BB08402A29468E1E00E0F846 /* FilesViewController.swift in Sources */,
 				BBAB647E29282B0C001645F1 /* Credentials.swift in Sources */,
 				BBF31B682924E21600C2B230 /* Coordinator.swift in Sources */,
 				BBF31B5F2922BDD800C2B230 /* UIColorExtension.swift in Sources */,
 				61EE63F829219D4900EAD178 /* FileManagerServiceProtocol.swift in Sources */,
-				61EE63F529219CE200EAD178 /* FilesViewController.swift in Sources */,
-				BBF31B662924E14900C2B230 /* AppCoordinator.swift in Sources */,
+				BB0F2FAA29413FEB00D0BF22 /* OutputProtocol.swift in Sources */,
+				BBF31B662924E14900C2B230 /* LoginCoordinator.swift in Sources */,
+				BB30CB932942392B00C1490D /* TabBarCoordinator.swift in Sources */,
+				BB753456293D35280030F1F0 /* KeychainService.swift in Sources */,
+				BB0840262945DE5E00E0F846 /* LoginViewController.swift in Sources */,
 				61EE63E02921957400EAD178 /* SceneDelegate.swift in Sources */,
-				61EE63FB29219D9500EAD178 /* FileManagerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
